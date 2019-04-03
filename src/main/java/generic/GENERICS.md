@@ -5,7 +5,6 @@ Java **Generic** methods and generic classes enable programmers to specify, with
 enerics also provide compile-time type safety that allows programmers to catch invalid types at **compile** time instead of runtime.  
 <br/>
 <br/>
-
   
 
 See the following examples:

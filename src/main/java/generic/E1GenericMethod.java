@@ -10,6 +10,9 @@ public class E1GenericMethod {
     /**
      * Generic Method printArray. It gets a type we defined <i>AT</i> and prints the element of that array based on
      * its type. Note that, the type is the object in the first time so you couldn't pass a <i>String</i> type to this array.
+     * Please note, I use AT type because I want you know we could name Generic any thing.
+     * However for the sake of matching the type with <i>Regular Expression</i> we have to pick this type from [A-Z][0-9]
+     * like we have done it in the <code>reverseArray</code> method in <i>E2GenericMethod</i> example.
      * @param inputArray
      * @param <AT> Array Type, custom <i>Generic</i> definition
      */
