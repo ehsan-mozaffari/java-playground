@@ -12,3 +12,5 @@ This example illustrates how we can print an array of different type using a sin
 It's like the Example 1 but shows you how to define a _T_ Generic type in the method input and return type.
  
 #### [Example 3 - Generic Method Bounded Type Parameter](E3GenericMethodBoundedTypeParameters.java) :
+
+#### [Example 5 - Generic and Subtyping](E5GenericAndSubtyping.java)

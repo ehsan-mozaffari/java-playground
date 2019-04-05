@@ -43,11 +43,11 @@ The following parameterizations of `PayloadList` are subtypes of `List<String>`:
 
 ![payload list hierarchy](doc/img/generics-payloadListHierarchy.gif)  
   
-See [the example](E5GenericAndSubtyping.java).
+See [the example](GENERICS-EXAMPLES.md#example-5---generic-and-subtypinge5genericandsubtypingjava).
 #### Wildcard and Subtyping 
 You could resolve the issue of Subtyping the above List  
 
-![](doc/img/generics-listParent.gif)   
+![list parent](doc/img/generics-listParent.gif)   
 by using 
 [Wildcard]() .
 In order to access `Number`'s method through `list<Integer>`'s elements use upper-bounded Wildcard:
@@ -63,9 +63,13 @@ The following diagram shows the relationships between several `List` classes dec
 
 
 ### Bounded Type Parameters
+Bounded type parameters are key to the implementation of generic algorithms.
 There may be times when you'll want to restrict the kinds of types that are allowed 
 to be passed to a type parameter. For example, a method that operates on numbers 
 might only want to accept instances of Number or its subclasses. 
-This is what bounded type parameters are for.  
+This is what bounded type parameters are for.
+The following is how we read that _Bounded Type Parameter_:  
+`<T extends Comparable<T>`: Type parameter `T` bounded by `Comparable<T>`.  
+
 To declare a bounded type parameter, list the type parameter's name, followed by the extends keyword, followed by its upper bound.  
 See [Example 3](GENERICS-EXAMPLES.md#example-3---generic-method-bounded-type-parametere3genericmethodboundedtypeparametersjava-)  
