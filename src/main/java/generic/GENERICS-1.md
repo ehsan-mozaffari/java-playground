@@ -24,7 +24,8 @@ The relationship between the type parameters of one class or interface and the t
 by the `extends` and `implements` clauses.  
 Using the `Collections` classes as an example, `ArrayList<E>` implements `List<E>`, and `List<E>` extends `Collection<E>`. 
 So `ArrayList<String>` is a subtype of `List<String>`, which is a subtype of `Collection<String>`. 
-So long as you do not vary the type argument, the subtyping relationship is preserved between the types.
+So long as you do not vary the type argument, the subtyping relationship is preserved between the types.  
+
 ![sample hierarchy](doc/img/generics-sampleHierarchy.gif)  
 
 Now imagine we want to define our own list interface, `PayloadList`, that associates an optional 
@@ -38,12 +39,15 @@ interface PayloadList<E,P> extends List<E> {
 The following parameterizations of `PayloadList` are subtypes of `List<String>`:
 * `PayloadList<String,String>`
 * `PayloadList<String,Integer>`
-* `PayloadList<String,Exception>`
+* `PayloadList<String,Exception>`  
+
 ![payload list hierarchy](doc/img/generics-payloadListHierarchy.gif)  
+  
 See [the example](E5GenericAndSubtyping.java).
 #### Wildcard and Subtyping 
-You could resolve the issue of Subtyping the above List
-![](doc/img/generics-listParent.gif)  
+You could resolve the issue of Subtyping the above List  
+
+![](doc/img/generics-listParent.gif)   
 by using 
 [Wildcard]() .
 In order to access `Number`'s method through `list<Integer>`'s elements use upper-bounded Wildcard:

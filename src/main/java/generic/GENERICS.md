@@ -70,12 +70,3 @@ unless you extend or implemented from another *class* or *interface* type.
 #### Restriction on Generics
 To find out what the restriction of generics [see this](GENERICS-RESTRICTION.md) 
 
-
-### Bounded Type Parameters
-There may be times when you'll want to restrict the kinds of types that are allowed 
-to be passed to a type parameter. For example, a method that operates on numbers 
-might only want to accept instances of Number or its subclasses. 
-This is what bounded type parameters are for.  
-To declare a bounded type parameter, list the type parameter's name, followed by the extends keyword, followed by its upper bound.  
-See [Example 3](GENERICS-EXAMPLES.md#example-3---generic-method-bounded-type-parametere3genericmethodboundedtypeparametersjava-)
-
