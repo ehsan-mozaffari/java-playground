@@ -1,4 +1,4 @@
-package designpattern;
+package designPattern;
 
 public class Factory {
 }
