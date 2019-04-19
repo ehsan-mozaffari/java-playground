@@ -1,5 +1,7 @@
 package generic;
 
+import java.util.Collection;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -37,7 +39,11 @@ public class E6GenericWildcard {
     /*public static void wildTest(List<?> l){
 
     }*/
-    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+
+
+    public static <T extends Number> void wildCardTest(List<? extends T> d) {
+        // Mishe har type typi ke behesh bedi bayad bache Number bashe
+    }
 
     public static void main(String[] args) {
 
@@ -64,6 +70,7 @@ public class E6GenericWildcard {
 //        unknownCollection.add("eeee");
         //unknownCollection.add("dsf");
         printCollection(unknownCollection);
+
 
         Collection<?> unCol = new ArrayList<Integer>();
       //  unCol.add(new Integer(1));

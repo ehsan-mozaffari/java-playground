@@ -60,17 +60,33 @@ The following parameterizations of `PayloadList` are subtypes of `List<String>`:
   
 See [the example](GENERICS-EXAMPLES.md#example-5---generic-and-subtypinge5genericandsubtypingjava).
 #### Wildcard and Subtyping 
+
+Wildcard means the _Type of unknown_ and defined with `?`.  
+The wildcard `?` in Java is a special type parameter that controls the type safety 
+of the use of generic (parameterized) types. It can be used in **variable declarations and instantiations** 
+as well as in **method definitions**, 
+For example, `Collection<?>` pronounced _collection of unknown_.
+If you defined it without the `extend` or `super` this is interpreted `Collection<? extends Object>` by Java.  
+It means you could put any subtypes of `Object` Type for this collection without subtyping issue.  
 You could resolve the issue of Subtyping the above List  
 
 ![list parent](doc/img/generics-listParent.gif)   
 by using 
 [Wildcard]() .  
 
-In generic code, the question mark (?), called the wildcard, represents an unknown type.
+In generic code, the question mark (`?`), called the wildcard, represents an unknown type.
 The wildcard can be used in a variety of situations: as the type of a parameter, field, or local variable; 
 sometimes as a return type (though it is better programming practice to be more specific). 
 The wildcard is never used as a type argument for a generic method invocation, 
 a generic class instance creation, or a supertype.  
+
+##### Wildcard as a Parameter Type
+In the body of a generic unit, the (formal) type parameter is handled like its _upper bound_ (expressed with `extends`; `Object` if not constrained). 
+If the return type of a method is the type parameter, the result (e.g. of type `?`) can be referenced by 
+a variable of the type of the upper bound (or Object). In the other direction, the wildcard fits no other type, 
+not even `Object`: If `?` has been applied as the formal type parameter of a method, no actual parameters can be passed to it. 
+However, objects of the unknown type can be read from the generic object and assigned to a variable of a supertype of the _upperbound_.  
+[See the example.](E7GenericWildcard.java)
 
 In order to access `Number`'s method through `list<Integer>`'s elements use upper-bounded Wildcard:
 ```java

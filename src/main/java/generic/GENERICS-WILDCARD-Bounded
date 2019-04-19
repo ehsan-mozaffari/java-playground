@@ -1,0 +1,53 @@
+## Generics - Bounded Wildcard
+
+#TODO 
+If you define 
+`List<? super Integer>` is equally similar to 
+`List<?>` because is equal to 
+`List<? extends Object>` and it says 
+`Integer` and all its parents including `Object`.
+So check it!!   
+
+
+
+A **bounded wildcard** is one with either an upper or a lower _inheritance 
+constraint_. The bounds can be both _class_ and _interface_ types. 
+Upper bounds are expressed using the `extends` keyword and lower bounds 
+using the `super` keyword. An upper bound on a wildcard must be 
+a subtype of the upper bound on the type parameter it is assigned.
+```java
+Generic<? extends SubtypeOfUpperBound> referenceConstrainedFromAbove;
+```
+This reference can hold any instantiation of `Generic` with an 
+_actual type parameter_ of `SubtypeOfUpperBound`'s subtype. 
+A wildcard that does not have an upper bound is effectively 
+the same as one that has the constraint `extends` `Object`, 
+since all types implicitly extend `Object`. A wildcard with a lower bound:  
+```java
+Generic<? super SubtypeOfUpperBound> referenceConstrainedFromBelow;
+```
+can hold instantiations of `Generic` with _any type_ that is both a _subtype_ of `UpperBound` 
+and a _supertype_ of `SubtypeOfUpperBound`. The type bounds are trivial examples that conform.   
+
+A wildcard without upperbound:   
+```java
+Generic<?> withoutRefWildCard;
+// Is Equal to 
+Generic<? extends Object> withObjectRefWildCard;
+```
+
+### Object Creation with Wildcard
+No objects may be created with a wildcard type parameter: <code>new Generic< ?>()</code> is forbidden 
+because `Generic< ?>` is abstract.[3] In practice, this is unnecessary because if one wanted 
+to create an object that was assignable to a variable of type `Generic< ?>`, one could simply use 
+any _arbitrary type_ (that falls within the constraints of the wildcard, if any) as the _type parameter_.   
+
+However, new `List<Generic< ?>>()` is allowed, because the wildcard is not a parameter to 
+the instantiated type `List`. The same holds for new `List<List< ?>>()`.   
+
+An array object that is an array of a parameterized type can only parameterized by 
+an unconstrained (i.e. with an unbound wildcard type parameter) type as the component 
+type: `new Generic<?>[20]` is correct, while new `Generic<SomeType>[20]` is not.   
+
+For both cases, using no parameters is another option. 
+This will generate a warning since it is less type-safe.
