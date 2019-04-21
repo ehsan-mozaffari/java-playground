@@ -10,7 +10,7 @@ package generic;
  * However, objects of the unknown type can be read from the generic object and assigned to
  * a variable of a supertype of the upperbound.
  */
-public class E7GenericWildcard {
+public class E7GenericWildcardVsConcrete {
 
     public static void testWildcard(Generic<? extends Number> gClass){
 
@@ -39,6 +39,7 @@ public class E7GenericWildcard {
         Generic<?> wildcardReference = concreteTypeReference;
         Number number = wildcardReference.read();// Object would also be OK
 
+        //ToDo What happened?
         //wildcardReference.write(new Object());// type error
         //wildcardReference.write(new Integer(10));// type error
         concreteTypeReference.write(new Integer(10));// OK

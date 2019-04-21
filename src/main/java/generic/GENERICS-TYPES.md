@@ -1,4 +1,4 @@
-# Java Generics 0-0-0-0-0
+# Java Generics Types
 
 
 ### Bounded Type Parameters
@@ -98,5 +98,6 @@ a relationship now exists between `intList` (a list of `Integer` objects) and `n
 The following diagram shows the relationships between several `List` classes declared with both upper and lower bounded wildcards.  
 ![wild card subtypes](doc/img/generics-wildcardSubtyping.gif)
 
-
+#### Generic Wildcard
+To find out Generic Wildcard [see this](GENERICS-WILDCARD-Bounded)
   

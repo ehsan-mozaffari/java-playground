@@ -20,7 +20,7 @@ public class E8GenericWildcardBounded {
         List<? super Integer> intListAndAllOfIntegerParents = new ArrayList<Object>();
 //        List<? super Integer> intListAndAllOfIntegerParentsNotSubtypeOfNumber = new ArrayList<Double>();
         List<? super Number> numberListAndAllOfNumberParents = new ArrayList<Object>();
-        //List<? super Number> numberListDoesntAllowItsChilds = new ArrayList<Integer>();
+        //List<? super Number> numberListDoesntAllowItsChildren = new ArrayList<Integer>();
 
         List<?> listOfUnknown1 = new ArrayList<Object>();
         List<?> listOfUnknown2 = new ArrayList<Integer>();

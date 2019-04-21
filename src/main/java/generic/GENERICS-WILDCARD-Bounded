@@ -6,7 +6,8 @@ If you define
 `List<?>` because is equal to 
 `List<? extends Object>` and it says 
 `Integer` and all its parents including `Object`.
-So check it!!   
+So [check it](E8GenericWildcardBounded.java)!!   
+
 
 
 
@@ -35,6 +36,9 @@ Generic<?> withoutRefWildCard;
 // Is Equal to 
 Generic<? extends Object> withObjectRefWildCard;
 ```
+[See the example6](E6GenericWildcardMethod.java)  
+[See the example7](E7GenericWildcardVsConcrete.java)  
+[See the example8](E8GenericWildcardBounded.java)
 
 ### Object Creation with Wildcard
 No objects may be created with a wildcard type parameter: <code>new Generic< ?>()</code> is forbidden 

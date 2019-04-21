@@ -48,8 +48,7 @@ Note2: Remember to always give the Parameter Type an Object instead of primitive
 Means to convert something abstract (Parametric Type) into something concrete (Concrete/Actual Type) by specialization.
 
 ### How to define Generics
-...........3 examples of generics with link
-To find out more please [see this](GENERICS-EXAMPLES.md)
+[see this](GENERICS-TYPES.md) to find out all types of Generics.
 
 
 ### Java Generic Type Naming Convention
@@ -69,4 +68,3 @@ unless you extend or implemented from another *class* or *interface* type.
 
 #### Restriction on Generics
 To find out what the restriction of generics [see this](GENERICS-RESTRICTION.md) 
-

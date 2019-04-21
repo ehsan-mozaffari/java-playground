@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class E6GenericWildcard {
+public class E6GenericWildcardMethod {
 
     public static void printCollectionObjectType(Collection<Object> o){
         return;
