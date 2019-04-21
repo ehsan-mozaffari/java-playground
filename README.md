@@ -6,3 +6,4 @@ Please note that this repo isn't the reference of best practice in each area but
 ## Java Basic Features Guide
 
 * [Generics](src/main/java/generic/GENERICS.md)
+* [Lambda Expression](src/main/java/lambdaExpression/LAMBDA.md)
