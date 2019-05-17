@@ -1,0 +1,25 @@
+# Optional
+[Oracle link](https://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html)  
+
+Optional is a class of java util to utilize 
+the `NullPointerException` Design Pattern.
+Java 8 has introduced a new class `Optional` in `java.util` package. 
+It is used to represent a value is present or absent. 
+The main advantage of this new construct is that No more 
+too many null checks and `NullPointerException`. 
+It avoids any runtime `NullPointerExceptions` and supports us in 
+developing clean and neat Java APIs or Applications. 
+Like _Collections_ and _arrays_, it is also a _Container_ to hold at most one value.  
+
+The advantage compared to `null` references is that the `Optional` class forces you 
+to think about the case when _the value is not present_. As a consequence, you can 
+prevent unintended _null pointer exceptions_.  
+
+It is important to note that the intention of the `Optional` class 
+is not to replace every single `null` reference. Instead, its purpose is to help 
+design _more-comprehensible APIs_ so that by just reading the signature of a method, 
+you can tell whether you can expect an optional value. This forces you to actively 
+unwrap an `Optional` to deal with the absence of a value.  
+
+
+

@@ -48,7 +48,7 @@ public class E6GenericWildcardMethod {
     public static void main(String[] args) {
 
         List<String> stringList = new ArrayList<>();
-        // Uncomment this to test. You have to use Wildcard for this see the documentation
+        // Uncomment this to Test. You have to use Wildcard for this see the documentation
         //printCollectionObjectType(stringList); //Compile Error You could just add List<Object> pass to this method.
 
         List list = new ArrayList();
